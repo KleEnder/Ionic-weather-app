@@ -1,0 +1,13 @@
+<ion-view view-title="Settings">
+	<ion-content>
+		<ion-list>
+			<ion-item class="item-divider">Units</ion-item>
+			<ion-radio ng-model="settings.units" ng-value="'si'">Celsius</ion-radio>
+			<ion-radio ng-model="settings.units" ng-value="'us'">Fahrenheit</ion-radio>
+		</ion-list>
+		<p class="padding">Weather data powered by <a href="http://openweathermap.org/">Openweathermap.io</a> and
+		geocoding powered by <a href="https://developers.google.com/maps/documentation/geocoding/">Google</a>.</p>
+	</ion-content>
+</ion-view>
+
+

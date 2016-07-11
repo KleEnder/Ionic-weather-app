@@ -1,0 +1,22 @@
+{
+  "name": "vremenskaAplikacija",
+  "app_id": "",
+  "proxies": [
+    {
+      "path": "/api/forecast",
+      "proxyUrl": "https://api.forecast.io/forecast/be3f9f871311a53778b0148728bb3518/"
+    },
+    {
+      "path": "/api",
+      "proxyUrl": "http://myserver.com/api"
+    }
+  ],
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

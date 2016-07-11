@@ -1,0 +1,33 @@
+<ion-view view-title="Current Conditions">
+	<ion-nav-buttons side="right">
+		<button class="button button-clear" menu-toggle="right">
+			<span class="icon ion-navicon"></span>
+		</button>
+	</ion-nav-buttons>
+	<ion-nav-buttons side="left">
+		<button class="button button-icon" ng-click="showOptions()">
+			<span class="icon ion-more"></span>
+		</button>
+	</ion-nav-buttons>
+	<ion-content>
+		<ion-refresher on-refresh="getWeather()" pulling-text="Pull to Refresh"> </ion-refresher>
+			<div class="bar bar-energized">
+				<h1 class="title">Location: {{params.city}}</h1>
+			</div>
+			<div>empty div</div>
+			<div>empty div</div>
+	      	<div class="mainWeather">
+		        <h4>Current Temperature: {{forecast.list[0].main.temp}}&deg;C</h4>     		       
+		        <h4>Today's Highest: {{forecast.list[0].main.temp_max}}&deg;C</h4>
+		        <h4>Today's Lowest: {{forecast.list[0].main.temp_min}}&deg;C</h4>
+		        <h4>Today's pressure: {{forecast.list[0].main.pressure}} hPa</h4>
+		        <h4>Humidity: {{forecast.list[0].main.humidity}}%</h4>
+		        <h4>Wind: {{forecast.list[0].wind.speed}}ms, {{getDirection(forecast.list[0].wind.deg)}}</h4>
+		        <h4>Day and time: {{forecast.list[0].dt * 1000 | date:"dd/MM/yyyy 'at' HH:mm"}}</h4>
+		        <div class="nekaj item-image">
+		        	<img src="{{getIconUrl(forecast.list[0].weather[0].icon)}}" />
+		        </div>
+		   	</div>
+	</ion-content>
+</ion-view>
+

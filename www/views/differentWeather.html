@@ -1,0 +1,25 @@
+<ion-view view-title="Find city or place">
+	<ion-content>
+		<ion-header-bar class="bar-energized">
+			<h1 class="title">Five day forecast</h1>
+		</ion-header-bar>
+		<ion-refresher on-refresh="getDifferentWeather()" pulling-text="Pull to Refresh"> </ion-refresher>
+		<div class="bar bar-energized">
+				<h1 class="title">City: {{fiveday.city.name}}</h1>
+			</div>
+		<div>asdasdas</div>
+		<div>asdasdas</div>	
+		<div class="list card">
+	      <div class="list">
+			    <a class="item item-thumbnail-left" href="#">
+			        
+			        <h2>Current Temperature: {{fiveday.list[0].main.temp}}&deg;</h2>
+		            <h2>Day and time: {{fiveday.list[0].dt_txt}}</h2>
+		            <h2>Wind: {{fiveday.list[0].wind.speed}}ms, {{getDirection(fiveday.list[0].wind.deg)}}</h2>
+			    </a>
+			    
+			</div>  
+	    </div>
+	</ion-content>
+</ion-view>
+

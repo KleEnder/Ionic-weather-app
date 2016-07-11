@@ -1,0 +1,87 @@
+<ion-modal-view>
+	<ion-header-bar class="bar-balanced">
+		<h1 class="title">12 Hour Forecast</h1>
+		<button class="button button-clear" ng-click="hideModal2()">
+			Close
+		</button>
+	</ion-header-bar>
+	<ion-content>
+		<ion-refresher on-refresh="getWeather()" pulling-text="Pull to Refresh"> </ion-refresher>
+	    <div class="has-header">
+	      <div class="bar bar-energized">
+	      	<h2 class="title">Location: {{params.city}}</h2>
+	      </div>
+	      <div>empty div</div>
+		  <div>empty div</div>    
+	      <div class="list">
+	      	<a class="item item-thumbnail-left" href="#">
+	      		<img src="{{getIconUrl(forecast.list[0].weather[0].icon)}}" />
+	       		<h2>Current Temperature: {{forecast.list[0].main.temp}}&deg;C</h2>
+	        	<h2>Day and time: {{forecast.list[0].dt * 1000 | date:"dd/MM/yyyy 'at' HH:mm"}}</h2>
+	        	<h2>Wind: {{forecast.list[0].wind.speed}}ms, {{getDirection(forecast.list[0].wind.deg)}}</h2>
+	    	</a>
+	    	<a class="item item-thumbnail-left" href="#">
+	    		<img src="{{getIconUrl(forecast.list[4].weather[0].icon)}}" />	
+	        	<h2>Current Temperature: {{forecast.list[4].main.temp}}&deg;C</h2>
+	        	<h2>Day and time: {{forecast.list[4].dt * 1000 | date:"dd/MM/yyyy 'at' HH:mm"}}</h2>
+	        	<h2>Wind: {{forecast.list[4].wind.speed}}ms, {{getDirection(forecast.list[4].wind.deg)}}</h2>
+	        </a>
+	        <a class="item item-thumbnail-left" href="#">
+	        	<img src="{{getIconUrl(forecast.list[8].weather[0].icon)}}" />
+		        <h2>Current Temperature: {{forecast.list[8].main.temp}}&deg;C</h2>
+		        <h2>Day and time: {{forecast.list[8].dt * 1000 | date:"dd/MM/yyyy 'at' HH:mm"}}</h2>
+		        <h2>Wind: {{forecast.list[8].wind.speed}}ms, {{getDirection(forecast.list[8].wind.deg)}}</h2>
+			</a>		        
+
+	        <a class="item item-thumbnail-left" href="#">
+	        	<img src="{{getIconUrl(forecast.list[12].weather[0].icon)}}" />
+		        <h2>Current Temperature: {{forecast.list[12].main.temp}}&deg;C</h2>
+		        <h2>Day and time: {{forecast.list[12].dt * 1000 | date:"dd/MM/yyyy 'at' HH:mm"}}</h2>
+		        <h2>Wind: {{forecast.list[12].wind.speed}}ms, {{getDirection(forecast.list[12].wind.deg)}}</h2>
+		    </a>
+
+		    <a class="item item-thumbnail-left" href="#">
+		    	<img src="{{getIconUrl(forecast.list[16].weather[0].icon)}}" />
+		        <h2>Current Temperature: {{forecast.list[16].main.temp}}&deg;C</h2>
+		        <h2>Day and time: {{forecast.list[16].dt * 1000 | date:"dd/MM/yyyy 'at' HH:mm"}}</h2>
+		        <h2>Wind: {{forecast.list[16].wind.speed}}ms, {{getDirection(forecast.list[16].wind.deg)}}</h2>
+	    	</a>
+
+	    	<a class="item item-thumbnail-left" href="#">
+	    		<img src="{{getIconUrl(forecast.list[20].weather[0].icon)}}" />
+		        <h2>Current Temperature: {{forecast.list[20].main.temp}}&deg;C</h2>
+		        <h2>Day and time: {{forecast.list[20].dt * 1000 | date:"dd/MM/yyyy 'at' HH:mm"}}</h2>
+		        <h2>Wind: {{forecast.list[20].wind.speed}}ms, {{getDirection(forecast.list[20].wind.deg)}}</h2>
+	    	</a>
+
+	        <a class="item item-thumbnail-left" href="#">
+	        	<img src="{{getIconUrl(forecast.list[24].weather[0].icon)}}" />
+	        	<h2>Current Temperature: {{forecast.list[24].main.temp}}&deg;C</h2>
+	       		<h2>Day and time: {{forecast.list[24].dt * 1000 | date:"dd/MM/yyyy 'at' HH:mm"}}</h2>
+	       		<h2>Wind: {{forecast.list[24].wind.speed}}ms, {{getDirection(forecast.list[24].wind.deg)}}</h2>
+	       	</a>
+
+	       	<a class="item item-thumbnail-left" href="#">
+	       		<img src="{{getIconUrl(forecast.list[28].weather[0].icon)}}" />
+		        <h2>Current Temperature: {{forecast.list[28].main.temp}}&deg;C</h2>
+		        <h2>Day and time: {{forecast.list[28].dt * 1000 | date:"dd/MM/yyyy 'at' HH:mm"}}</h2>
+		        <h2>Wind: {{forecast.list[28].wind.speed}}ms, {{getDirection(forecast.list[28].wind.deg)}}</h2>
+	    	</a>
+
+	    	<a class="item item-thumbnail-left" href="#">
+	    		<img src="{{getIconUrl(forecast.list[32].weather[0].icon)}}" />
+	        	<h2>Current Temperature: {{forecast.list[32].main.temp}}&deg;C</h2>
+	        	<h2>Day and time: {{forecast.list[32].dt * 1000 | date:"dd/MM/yyyy 'at' HH:mm"}}</h2>
+	        	<h2>Wind: {{forecast.list[32].wind.speed}}ms, {{getDirection(forecast.list[32].wind.deg)}}</h2>
+	    	</a>
+
+	    	<a class="item item-thumbnail-left" href="#">
+	    		<img src="{{getIconUrl(forecast.list[35].weather[0].icon)}}" />
+	        	<h2>Current Temperature: {{forecast.list[35].main.temp}}&deg;C</h2>
+	        	<h2>Day and time: {{forecast.list[35].dt * 1000 | date:"dd/MM/yyyy 'at' HH:mm"}}</h2>
+	        	<h2>Wind: {{forecast.list[35].wind.speed}}ms, {{getDirection(forecast.list[35].wind.deg)}}</h2>
+	      	</a>
+	      </div>
+		</div>
+	</ion-content>
+</ion-modal-view>

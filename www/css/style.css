@@ -1,0 +1,15 @@
+/* Empty. Add your own CSS if you like */
+
+.mainWeather > h4 {
+	font-size: 20px;
+	text-align: center;
+}
+
+.mainWeather .item-image {
+	padding: 120px 120px 120px 120px;
+	margin-top: -140px;
+}
+
+.title {
+	color: #FFCF79;
+}

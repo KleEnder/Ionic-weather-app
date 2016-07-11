@@ -1,0 +1,19 @@
+<ion-view view-title="Find city or place">
+	<ion-content>
+		<div class="list">
+			<div class="item item-input-inset">
+				<label class="item-input-wrapper">
+					<input type="search" ng-model="model.term" placeholder="Find a city or place">
+				</label>
+				<button class="button button button-energized" ng-click="seek()">Submit</button>	
+			</div>
+			<div class="item" ng-repeat="result in results" ui-sref="weather({city: result.formatted_address, lat: result.geometry.location.lat, lng: result.geometry.location.lng})">
+				{{result.formatted_address}}
+			</div>
+			
+		</div>
+		<p class="padding">Weather data powered by <a href="http://openweathermap.org/">Openweathermap.org</a></p>
+		<p class="padding">Geocoding powered by <a href="https://developers.google.com/maps/documentation/geocoding/">Google</a></p>
+	</ion-content>
+</ion-view>
+

@@ -1,0 +1,25 @@
+<ion-side-menus>
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-balanced">
+      <ion-nav-buttons side="right">
+        <button class="button button-clear" menu-toggle="right">
+          <span class="icon ion-navicon"></span>
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view></ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu side="right" >
+    <ion-header-bar class="bar-energized">
+      <h2 class="title">My Weather</h2>
+    </ion-header-bar>
+    <ion-content>
+        <ion-list>
+          <ion-item class="item-icon-right" ui-sref="iskanje" menu-close><span class="icon ion-ios-color-wand"></span> Find a City or place</ion-item>
+          <ion-item class="item-icon-right" ui-sref="settings" menu-close><span class="icon ion-settings"></span> Settings</ion-item>
+          <ion-item class="item-icon-right" ui-sref="grafpodatki" menu-close><span class="icon ion-ios-pie"></span> Graphical presentation of data</ion-item>
+          <ion-item class="item-icon-right" ui-sref="weather({city: location.city, lat: location.lat, lng: location.lng})" menu-close ng-repeat="location in locations"><span class="icon ion-pin"></span> {{location.city}}</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
